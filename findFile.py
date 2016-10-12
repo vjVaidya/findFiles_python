@@ -6,8 +6,8 @@ import pandas as pd
 
 class featureMatrix():
     def __init__(self):
-        self.topWavDirName = "J_lists"
-        self.topWavDir = os.path.join(os.path.dirname(__file__), self.topWavDirName)
+        self.topDirName = "J_lists"
+        self.topDir = os.path.join(os.path.dirname(__file__), self.topDirName)
 
 # function to find a given type of file existing in the directory
     def findFilesRecursive(self,directory):
@@ -37,7 +37,7 @@ class featureMatrix():
         return fileLabels
 
     def process(self):
-        self.FileLabels= self.findFilesRecursive(self.topWavDir)
+        self.FileLabels= self.findFilesRecursive(self.topDir)
 
         return self.FileLabels
 
