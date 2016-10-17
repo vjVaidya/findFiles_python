@@ -4,7 +4,7 @@ __author__ = 'vaidvj'
 import os
 import pandas as pd
 
-class featureMatrix():
+class fileFinder():
     def __init__(self):
         self.topDirName = "J_lists"
         self.topDir = os.path.join(os.path.dirname(__file__), self.topDirName)
@@ -42,5 +42,5 @@ class featureMatrix():
         return self.FileLabels
 
 if __name__ == "__main__":
-    c = featureMatrix()
+    c = fileFinder()
     c.process()
